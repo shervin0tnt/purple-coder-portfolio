@@ -21,14 +21,14 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in-up">
           {/* Glowing title */}
           <h1 className="text-6xl md:text-8xl font-bold">
-            <span className="text-gradient glow-purple">Creative</span>
+            <span className="text-gradient glow-purple">تکنولوژیست</span>
             <br />
-            <span className="text-foreground">Technologist</span>
+            <span className="text-foreground">خلاق</span>
           </h1>
 
           {/* Subtitle with typing effect feel */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Full-Stack Developer • 3D Artist • AI Enthusiast
+            توسعه‌دهنده فول‌استک • هنرمند سه‌بعدی • علاقه‌مند به هوش مصنوعی
           </p>
 
           {/* Decorative line */}
@@ -45,7 +45,7 @@ const Hero = () => {
               className="bg-primary hover:bg-primary-glow text-primary-foreground shadow-[0_0_20px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_30px_hsl(var(--primary)/0.8)] transition-all"
               onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
             >
-              View Portfolio
+              مشاهده نمونه‌کارها
             </Button>
             <Button
               size="lg"
@@ -53,7 +53,7 @@ const Hero = () => {
               className="border-accent text-accent hover:bg-accent hover:text-accent-foreground shadow-[0_0_15px_hsl(var(--accent)/0.3)] hover:shadow-[0_0_25px_hsl(var(--accent)/0.6)] transition-all"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Get In Touch
+              ارتباط با من
             </Button>
           </div>
         </div>
@@ -62,7 +62,7 @@ const Hero = () => {
         <button
           onClick={scrollToNext}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
-          aria-label="Scroll to next section"
+          aria-label="اسکرول به بخش بعدی"
         >
           <ArrowDown className="w-8 h-8 text-primary" />
         </button>

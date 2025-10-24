@@ -1,14 +1,8 @@
-import { Mail, Github, Linkedin, MessageSquare } from "lucide-react";
+import { Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 
 const Contact = () => {
-  const socialLinks = [
-    { icon: Github, label: "GitHub", href: "#", color: "primary" },
-    { icon: Linkedin, label: "LinkedIn", href: "#", color: "accent" },
-    { icon: Mail, label: "Email", href: "mailto:hello@example.com", color: "primary" },
-  ];
-
   return (
     <section
       id="contact"
@@ -17,10 +11,10 @@ const Contact = () => {
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            Let's <span className="text-gradient glow-green">Connect</span>
+            <span className="text-gradient glow-green">ارتباط</span> با من
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? Let's build something amazing together
+            پروژه‌ای در ذهن دارید؟ بیایید با هم چیزی شگفت‌انگیز بسازیم
           </p>
         </div>
 
@@ -32,57 +26,44 @@ const Contact = () => {
 
           <div className="relative z-10">
             <div className="mb-8">
-              <MessageSquare className="w-16 h-16 mx-auto text-primary mb-4" />
+              <Send className="w-16 h-16 mx-auto text-primary mb-4" />
               <h3 className="text-3xl font-bold mb-4 text-foreground">
-                Ready to Start?
+                آماده شروع هستید؟
               </h3>
-              <p className="text-muted-foreground mb-8">
-                Whether you need a stunning 3D visualization, a cutting-edge web application,
-                or an AI-powered solution, I'm here to help bring your vision to life.
+              <p className="text-muted-foreground mb-8 leading-relaxed">
+                چه نیاز به یک ویژوالیزیشن سه‌بعدی خیره‌کننده، یک اپلیکیشن وب پیشرفته،
+                یا راهکاری مبتنی بر هوش مصنوعی داشته باشید، من اینجا هستم تا به تحقق 
+                ایده‌های شما کمک کنم.
               </p>
             </div>
 
-            {/* Social Links */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                const isAccent = social.color === "accent";
-                return (
-                  <Button
-                    key={social.label}
-                    variant="outline"
-                    size="lg"
-                    className={`${
-                      isAccent
-                        ? "border-accent/30 text-accent hover:bg-accent/10 hover:border-accent shadow-[0_0_15px_hsl(var(--accent)/0.2)]"
-                        : "border-primary/30 text-primary hover:bg-primary/10 hover:border-primary shadow-[0_0_15px_hsl(var(--primary)/0.2)]"
-                    } transition-all`}
-                    asChild
-                  >
-                    <a href={social.href} target="_blank" rel="noopener noreferrer">
-                      <Icon className="w-5 h-5 mr-2" />
-                      {social.label}
-                    </a>
-                  </Button>
-                );
-              })}
+            {/* Telegram Contact */}
+            <div className="mb-8">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white shadow-[0_0_30px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.7)] transition-all text-lg px-8"
+                asChild
+              >
+                <a
+                  href="https://t.me/shervin_tnt3"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Send className="w-5 h-5 ml-2" />
+                  ارسال پیام در تلگرام
+                </a>
+              </Button>
+              <p className="text-sm text-muted-foreground mt-4 font-mono">
+                @shervin_tnt3
+              </p>
             </div>
-
-            {/* Main CTA */}
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white shadow-[0_0_30px_hsl(var(--primary)/0.5)] hover:shadow-[0_0_40px_hsl(var(--primary)/0.7)] transition-all text-lg px-8"
-            >
-              <Mail className="w-5 h-5 mr-2" />
-              Send Message
-            </Button>
           </div>
         </Card>
 
         {/* Footer */}
         <div className="text-center mt-12 text-muted-foreground">
           <p className="text-sm">
-            © 2025 Creative Technologist • Built with React & TypeScript
+            © ۱۴۰۴ تکنولوژیست خلاق • ساخته شده با React و TypeScript
           </p>
         </div>
       </div>

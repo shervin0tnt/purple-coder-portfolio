@@ -4,26 +4,26 @@ import { Button } from "./ui/button";
 
 const projects = [
   {
-    title: "3D Architectural Visualization",
-    description: "High-quality 3D modeling and rendering for architectural projects",
+    title: "ویژوالیزیشن معماری سه‌بعدی",
+    description: "مدل‌سازی و رندرینگ سه‌بعدی با کیفیت بالا برای پروژه‌های معماری",
     tech: ["3DS Max", "SketchUp"],
     gradient: "from-primary/20 to-purple-500/20",
   },
   {
-    title: "Full-Stack Web Application",
-    description: "Modern responsive web apps with React and TypeScript",
+    title: "وب اپلیکیشن فول‌استک",
+    description: "اپلیکیشن‌های وب مدرن و ریسپانسیو با React و TypeScript",
     tech: ["React", "TypeScript", "Tailwind"],
     gradient: "from-accent/20 to-green-500/20",
   },
   {
-    title: "AI-Powered Solution",
-    description: "Intelligent applications leveraging AI capabilities",
+    title: "راهکار هوشمند با AI",
+    description: "اپلیکیشن‌های هوشمند با استفاده از قابلیت‌های هوش مصنوعی",
     tech: ["Python", "AI", "APIs"],
     gradient: "from-primary/20 to-blue-500/20",
   },
   {
-    title: "Unity Game Development",
-    description: "Interactive 3D experiences and game mechanics",
+    title: "توسعه بازی با Unity",
+    description: "تجربیات سه‌بعدی تعاملی و مکانیک‌های بازی",
     tech: ["Unity", "C#", "3D"],
     gradient: "from-accent/20 to-emerald-500/20",
   },
@@ -38,10 +38,10 @@ const Portfolio = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-5xl md:text-6xl font-bold mb-4">
-            Featured <span className="text-gradient glow-purple">Projects</span>
+            <span className="text-gradient glow-purple">نمونه‌کارهای</span> برگزیده
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of creative and technical excellence
+            نمایشی از تعالی خلاقانه و فنی
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const Portfolio = () => {
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:2rem_2rem]" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-6xl font-bold text-white/10">
+                  <div className="text-6xl font-bold text-white/10 font-mono">
                     {index + 1}
                   </div>
                 </div>
@@ -76,7 +76,7 @@ const Portfolio = () => {
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"
+                      className="px-3 py-1 text-sm bg-primary/10 text-primary rounded-full border border-primary/20 font-mono"
                     >
                       {tech}
                     </span>
@@ -89,8 +89,8 @@ const Portfolio = () => {
                     size="sm"
                     className="flex-1 border-primary/30 text-primary hover:bg-primary/10"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    View Project
+                    <ExternalLink className="w-4 h-4 ml-2" />
+                    مشاهده پروژه
                   </Button>
                   <Button
                     variant="outline"
